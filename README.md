@@ -1,2 +1,2 @@
 # iListen
-Web aplication by Andre and Dani
+Web application by Andre and Dani
