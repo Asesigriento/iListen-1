@@ -3,14 +3,19 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const { request } = require('http');
-
-
+const Growl = require('node-notifier').Growl;
+var notifier= new Growl({
+    name : 'Growl Name Used',
+    host: 'localhost',
+    port : 23053
+})
 const conexion = mysql.createConnection({
     host : 'localhost',
     user : 'root',
     password : '',
     database : 'users'
 });
+conexion.connect();
 const app = express();
 
 app.use(session({
@@ -27,40 +32,66 @@ app.use(express.urlencoded({extended : true}));
 
 app.use(express.static('controllers'));
 
-app.get('/',function(req,res){
+app.get('/',async(req,res)=>{
     res.sendFile(path.join(__dirname + '/views/index.html'));
 });
-app.get('/home',function(req,res){
+app.get('/home',async(req,res)=>{
     res.sendFile(path.join(__dirname + '/views/principal.html'));
 });
 
-app.post('/auth',function(req,res){
+app.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
     let pass_register = req.body.pass_register; 
 
 if(nombre_register && pass_register){
-    conexion.query('INSERT INTO usuarios (username,password) VALUES (?,?)',[nombre_register,pass_register],function(error,fields){
+    /*conexion.query('INSERT INTO usuarios (username,password) VALUES (?,?)',[nombre_register,pass_register],function(error,fields){
         if(error) throw error;
 
         res.redirect('/');
-    });
-   
+    });*/
+    conexion.query('SELECT username from usuarios'),function(error,resultados){
+        var c = "";
+        resultados.forEach(element => {
+            if(error){
+                throw error;
+            }
+            if(element == nombre_register){
+                if(error){
+                    throw error;
+                }
+                c="hecho"; 
+            }
+        });
+        if(c == "hecho"){
+            conexion.query('INSERT INTO usuarios (username,password) VALUES (?,?)',[nombre_register,pass_register],function(error,fields){
+                if(error) throw error;
+            });
+        }
+        conexion.end();
+    }
+    res.redirect('/');
 }
 else{
-    res.send('error :(');
-    res.end();
-
+    //res.send('error :(');
+    //res.end();
+    notifier.notify({
+        title: 'Asies',
+        message : 'Holaa',
+        icon: undefined,
+        wait: false 
+    },
+    function(error,response){
+        console.log(response);
+    });
+    conexion.end();
 }
 });
 
-app.post('/login',function(req,res){
+app.post('/login',async(req,res)=>{
     let nombre_login = req.body.nombre_login;
     let pass_login = req.body.pass_login; 
-    
-
     if (nombre_login && pass_login) {
 	    conexion.query('SELECT * FROM usuarios WHERE username = ? AND password = ?', [nombre_login, pass_login], function(error, results,fields) {
-		
 	    if (error) {
             throw error;
         }
@@ -76,12 +107,19 @@ app.post('/login',function(req,res){
 		}		
     });	
     }else{
-        res.send('error :(');
-        res.end();
+        //res.send('error :(');
+        //res.end();
+        notifier.notify({
+            title: 'Asies',
+            message : 'Holaa',
+            icon: undefined,
+            wait: false 
+        },
+        function(error,response){
+            console.log(response);
+        });
         
     }
-    
-	
-
+    conexion.end();
 });
 app.listen(3000);
