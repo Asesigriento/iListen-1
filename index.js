@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
@@ -16,7 +17,7 @@ const conexion = mysql.createConnection({
     database : 'users'
 });
 conexion.connect();
-const app = express();
+var app = express();
 
 app.use(session({
     secret : 'secret',
@@ -27,17 +28,14 @@ app.use(express.static(__dirname + '/public/'));
 app.use(express.static(__dirname + '/controllers/'));
 app.use(express.static(__dirname +'public/img'));
 app.use(express.static(__dirname +'public/music'));
+app.use(express.static(__dirname + '/routes/'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
 app.use(express.static('controllers'));
 
-app.get('/',async(req,res)=>{
-    res.sendFile(path.join(__dirname + '/views/index.html'));
-});
-app.get('/home',async(req,res)=>{
-    res.sendFile(path.join(__dirname + '/views/principal.html'));
-});
+const routes = require('./routes/routes.js');
+app.use(routes);
 
 app.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
@@ -100,7 +98,7 @@ app.post('/login',async(req,res)=>{
             req.session.loggedin = true;
             req.session.nombre_login = nombre_login;
             // Redirect to home page
-            res.redirect('/home');
+            app.use('/home',routes);
         }
         else {
 		res.send('Incorrect Username and/or Password!');
