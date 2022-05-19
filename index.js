@@ -25,4 +25,4 @@ app.use(express.urlencoded({extended : true}));
 const routes = require('./routes/routes.js');
 app.use(routes);
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
