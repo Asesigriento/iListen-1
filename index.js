@@ -5,10 +5,15 @@ const { request } = require('http');
 
 var app = express();
 app.use(session({
-    secret : 'secret',
-    resave : true,
-    saveUninitialized : true
-}));
+    cookie:{
+        secure: true,
+        maxAge:60000
+           },
+    store: new RedisStore(),
+    secret: 'secret',
+    saveUninitialized: true,
+    resave: false
+    }));
 
 
 //Middleware que te permite cargar archivos de imagenes, musica, css etc.
