@@ -3,13 +3,13 @@ var router = express.Router();
 var path = require('path');
 const mysql = require('mysql');
 //Conexión a la BBDD
-const conexion = mysql.createConnection({
+/*const conexion = mysql.createConnection({
     host : 'localhost',
     user : 'root',
     password : '',
     database : 'users'
 });
-conexion.connect();
+conexion.connect();*/
 
 //Rutas
 router.get('/', function(req,res){
@@ -21,17 +21,17 @@ router.get('/home',function(req,res){
 
 
 //Registro de usuario
-router.post('/reg',async(req,res)=>{
+/*router.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
     let pass_register = req.body.pass_register; 
 
-if(nombre_register && pass_register){
+if(nombre_register && pass_register){*/
     /*conexion.query('INSERT INTO usuarios (username,password) VALUES (?,?)',[nombre_register,pass_register],function(error,fields){
         if(error) throw error;
 
         res.redirect('/');
     });*/
-    conexion.query('SELECT username from usuarios'),function(error,resultados){
+    /*conexion.query('SELECT username from usuarios'),function(error,resultados){
         var c = "";
         resultados.forEach(element => {
             if(error){
@@ -60,10 +60,11 @@ else{
     conexion.end();
 }
 });
+*/
 
 
 //Login de usuario
-router.post('/login',async(req,res)=>{
+/*router.post('/login',async(req,res)=>{
     let nombre_login = req.body.nombre_login;
     let pass_login = req.body.pass_login; 
     if (nombre_login && pass_login) {
@@ -87,6 +88,6 @@ router.post('/login',async(req,res)=>{
         res.end();
     }
     conexion.end();
-});
+});*/
 //Exportación del módulo
 module.exports = router;
