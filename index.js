@@ -4,17 +4,12 @@ const path = require('path');
 const { request } = require('http');
 
 var app = express();
-app.use(session({
-    cookie:{
-        secure: true,
-        maxAge:60000
-           },
-    store: new RedisStore(),
-    secret: 'secret',
-    saveUninitialized: true,
-    resave: false
-    }));
-
+/*app.use(session({
+    secret : 'secret',
+    resave : true,
+    saveUninitialized : true
+}));
+*/
 
 //Middleware que te permite cargar archivos de imagenes, musica, css etc.
 app.use(express.static(__dirname + '/public/'));
