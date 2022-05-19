@@ -12,12 +12,12 @@ const mysql = require('mysql');
 conexion.connect();*/
 
 //Rutas
-router.get('/', function(req,res){
+/*router.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/../views/index.html'));
 });
 router.get('/home',function(req,res){
     res.sendFile(path.join(__dirname + '/../views/principal.html'));
-});
+});*/
 
 
 //Registro de usuario

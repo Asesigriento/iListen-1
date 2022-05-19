@@ -20,9 +20,11 @@ app.use(express.static('controllers'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
-
+router.get('/', function(req,res){
+    res.sendFile(path.join(__dirname+'/views/index.html'));
+});
 //Importación de un módulo para obtener las rutas
-const routes = require('./routes/routes.js');
+/*const routes = require('./routes/routes.js');
 app.use(routes);
-
+*/
 app.listen(3000);
