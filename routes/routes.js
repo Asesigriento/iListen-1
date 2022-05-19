@@ -12,12 +12,12 @@ const mysql = require('mysql');
 conexion.connect();*/
 
 //Rutas
-/*router.get('/', function(req,res){
+router.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/../views/index.html'));
 });
 router.get('/home',function(req,res){
     res.sendFile(path.join(__dirname + '/../views/principal.html'));
-});*/
+});
 
 
 //Registro de usuario
@@ -25,8 +25,8 @@ router.get('/home',function(req,res){
     let nombre_register = req.body.nombre_register;
     let pass_register = req.body.pass_register; 
 
-if(nombre_register && pass_register){*/
-    /*conexion.query('INSERT INTO usuarios (username,password) VALUES (?,?)',[nombre_register,pass_register],function(error,fields){
+if(nombre_register && pass_register){
+    conexion.query('INSERT INTO usuarios (username,password) VALUES (?,?)',[nombre_register,pass_register],function(error,fields){
         if(error) throw error;
 
         res.redirect('/');
@@ -49,8 +49,8 @@ if(nombre_register && pass_register){*/
                 if(error) throw error;
             });
         }
-        conexion.end();
-    }
+        conexion.end();*/
+   /* }
     //Lleva a la página principal de la web
     res.redirect('/');
 }
@@ -59,8 +59,8 @@ else{
     res.end();
     conexion.end();
 }
-});
-*/
+});*/
+
 
 
 //Login de usuario
