@@ -61,7 +61,7 @@ router.post('/login',async(req,res)=>{
     let pass_login = req.body.pass_login; 
     if (nombre_login && pass_login) {
         const client = await pool.connect();
-	    const result = await client.query("SELECT * FROM usuarios ", [nombre_login, pass_login], function(error, results,fields) {
+	    const result = await client.query("SELECT * FROM usuarios ",function(error, results,fields) {
 	    if (error) {
             throw error;
         }
