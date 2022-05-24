@@ -37,12 +37,15 @@ router.post('/reg',async(req,res)=>{
 if(nombre_register && pass_register){
     try{
         const client = await pool.connect();
-        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,res)=>{
+        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,rest)=>{
            if(err){
                console.log("No se ha introducido nada");
+               console.log(err);
            }
+           else{
             pool.end();
-           res.send("registro exitoso")
+            rest.send("registro exitoso")
+           }
         });
         client.release();
         //Lleva a la página principal de la web
@@ -59,7 +62,7 @@ catch(error){console.log(error);}
 });
 
 //Login de usuario
-router.post('/login',async(req,res)=>{
+/*router.post('/login',async(req,res)=>{
     let nombre_login = req.body.nombre_login;
     let pass_login = req.body.pass_login; 
     if (nombre_login && pass_login) {
@@ -84,6 +87,6 @@ router.post('/login',async(req,res)=>{
         res.send('error :(');
         res.end();
     }
-});
+});*/
 //Exportación del módulo
 module.exports = router;
