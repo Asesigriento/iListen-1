@@ -19,6 +19,8 @@ const pool = new Pool({
 });
 conexion.connect();*/
 
+//middleware
+
 //Rutas
 router.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/../views/index.html'));
@@ -37,7 +39,7 @@ router.post('/reg',async(req,res)=>{
 if(nombre_register && pass_register){
     try{
         const client = await pool.connect();
-        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,rest)=>{
+        const result = await client.query("INSERT INTO usuarios (cod_usuario,nombre,password) VALUES(1,?,?)",[nombre_register,pass_register],(err,rest)=>{
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);

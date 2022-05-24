@@ -3,7 +3,6 @@ const session = require('express-session');
 const path = require('path');
 const { request } = require('http');
 
-
 var app = express();
 /*app.use(session({
     secret : 'secret',
