@@ -80,7 +80,6 @@ router.post('/login',async(req,res)=>{
         res.send('error :(');
         res.end();
     }
-    conexion.end();
 });
 //Exportación del módulo
 module.exports = router;
