@@ -13,8 +13,7 @@ router.get('/db', async (req, res) => {
     try {
       
     } catch (err) {
-      console.error(err);
-      res.send("Error " + err);
+     
     }
   })
 
@@ -43,14 +42,18 @@ router.post('/reg',async(req,res)=>{
 
     try{
 if(nombre_register && pass_register){
-
-    const client = await pool.connect();
-      const result = await client.query('INSERT INTO usuarios (nombre,password) VALUES(?,?)',[nombre_register,pass_register]);
-      client.release();
+    try{
+        const client = await pool.connect();
+        const result = await client.query('INSERT INTO usuarios (nombre,password) VALUES(?,?)',[nombre_register,pass_register]);
+        client.release();
+        //Lleva a la página principal de la web
         res.redirect('/');
+      }
+    catch (error){
+        console.error(err);
+        res.send("Error " + err);
     }
-    //Lleva a la página principal de la web
-    res.redirect('/');
+}
     }
 catch(error){console.log(error);}
 
