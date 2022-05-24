@@ -55,14 +55,13 @@ catch(error){console.log(error);}
 
 });
 
-
-
 //Login de usuario
-/*router.post('/login',async(req,res)=>{
+router.post('/login',async(req,res)=>{
     let nombre_login = req.body.nombre_login;
     let pass_login = req.body.pass_login; 
     if (nombre_login && pass_login) {
-	    conexion.query('SELECT * FROM usuarios WHERE username = ? AND password = ?', [nombre_login, pass_login], function(error, results,fields) {
+        const client = await pool.connect();
+	    const result = await client.query("SELECT nombre,password FROM usuarios WHERE username = ? AND password = ?", [nombre_login, pass_login], function(error, results,fields) {
 	    if (error) {
             throw error;
         }
@@ -82,6 +81,6 @@ catch(error){console.log(error);}
         res.end();
     }
     conexion.end();
-});*/
+});
 //Exportación del módulo
 module.exports = router;
