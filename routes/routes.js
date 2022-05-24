@@ -37,7 +37,10 @@ router.post('/reg',async(req,res)=>{
 if(nombre_register && pass_register){
     try{
         const client = await pool.connect();
-        const result = await client.query('INSERT INTO usuarios (nombre,password) VALUES(?,?)',[nombre_register,pass_register]);
+        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,res)=>{
+            console.log(err,res);
+            pool.end();
+        });
         client.release();
         //Lleva a la página principal de la web
         res.redirect('/');
