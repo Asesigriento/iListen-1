@@ -43,8 +43,8 @@ if(nombre_register && pass_register){
         res.redirect('/');
       }
     catch (error){
-        console.error(err);
-        res.send("Error " + err);
+        console.error(error);
+        res.send("Error " + error);
     }
 }
     }
