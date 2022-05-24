@@ -32,14 +32,14 @@ router.get('/home',function(req,res){
 
 //Registro de usuario
 router.post('/reg',async(req,res)=>{
-    let nombre_register = req.params.nombre_register;
-    let pass_register = req.params.pass_register; 
+    let nombre_register = req.body.nombre_register;
+    let pass_register = req.body.pass_register; 
 
     try{
 if(nombre_register && pass_register){
     try{
         const client = await pool.connect();
-        const result = await client.query("INSERT INTO usuarios (cod_usuario,nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,rest)=>{
+        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,rest)=>{
            if(err){
                client.
                console.log("No se ha introducido nada");
