@@ -40,6 +40,7 @@ if(nombre_register && pass_register){
         const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,res)=>{
             console.log(err,res);
             pool.end();
+           res.send("registro exitoso")
         });
         client.release();
         //Lleva a la página principal de la web
