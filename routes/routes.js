@@ -74,7 +74,7 @@ router.post('/login',async(req,res)=>{
         }
         else {
         
-		res.send(results,fields);
+		res.send("mostrando");
 		}		
     });	
     }else{
