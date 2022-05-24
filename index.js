@@ -2,13 +2,7 @@ const express = require('express');
 const session = require('express-session');
 const path = require('path');
 const { request } = require('http');
-const {Pool} = require('pg');
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl:{
-        rejectUnauthorized : false
-    }
-});
+
 
 var app = express();
 /*app.use(session({

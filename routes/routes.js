@@ -2,6 +2,13 @@ var express = require('express');
 var router = express.Router();
 var path = require('path');
 const mysql = require('mysql');
+const {Pool} = require('pg');
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl:{
+        rejectUnauthorized : false
+    }
+});
 router.get('/db', async (req, res) => {
     try {
       const client = await pool.connect();
