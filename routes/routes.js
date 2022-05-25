@@ -5,7 +5,6 @@ var path = require('path');
 const mysql = require('mysql');
 const {Pool, Client} = require('pg');
 const bodyParser = require('body-parser');
-const { NotificationCenter } = require('node-notifier');
 const { executionAsyncResource } = require('async_hooks');
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
