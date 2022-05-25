@@ -61,7 +61,7 @@ if(nombre_register && pass_register){
            else{
             pool.end();
             console.log("registro exitoso")
-            res.send("/")
+            res.redirect("/");
            }
         });
         client.release();
