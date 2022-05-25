@@ -106,7 +106,7 @@ router.post('/login',async(req,res)=>{
         }
         else {
         pool.end();
-		res.send("/home");
+		res.redirect("/home");
 		}		
     });	
     }else{
