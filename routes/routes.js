@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const notifier = require('node-notifier').NotificationCenter;
+var notifier = require('node-notifier').NotificationCenter;
 var path = require('path');
 const mysql = require('mysql');
 const {Pool, Client} = require('pg');
