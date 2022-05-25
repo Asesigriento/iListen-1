@@ -1,16 +1,22 @@
 var express = require('express');
 var router = express.Router();
+const notifier = require('node-notifier').NotificationCenter;
 var path = require('path');
 const mysql = require('mysql');
 const {Pool, Client} = require('pg');
 const bodyParser = require('body-parser');
+const { NotificationCenter } = require('node-notifier');
+const { executionAsyncResource } = require('async_hooks');
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl:{
         rejectUnauthorized : false
     }
 });
-
+var notifier = new NotificationCenter({
+    withFallback: false,
+    customPath: undefined
+});
 var app1= express();
 //Conexión a la BBDD
 /*const conexion = mysql.createConnection({
@@ -75,6 +81,26 @@ if(nombre_register && pass_register){
             pool.end();
             //Lleva a la página principal de la web
             console.log("registro exitoso")
+            notifier.notify({
+                title: "registro exitoso",
+                subtitle: undefined,
+                message: "el usuario ha sido registrado con exito",
+                sound:false,
+                icon:"Terminal Icon",
+                contentImage: undefined,
+                open: undefined,
+                wait: false,
+                timeout: 5,
+                closeLabel: undefined,
+                actions: undefined,
+                dropdownLabel: undefined,
+                reply: false
+            },
+            function(error,response,metadata){
+                console.log(response,metadata)
+            }
+            );
+            
             res.redirect("/");
            }
         });
