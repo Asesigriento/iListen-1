@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var notifier = require('node-notifier').NotificationCenter;
+const NotificationCenter = require('node-notifier').NotificationCenter;
 var path = require('path');
 const mysql = require('mysql');
 const {Pool, Client} = require('pg');
 const bodyParser = require('body-parser');
-const { NotificationCenter } = require('node-notifier');
+
 const { executionAsyncResource } = require('async_hooks');
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -13,7 +13,7 @@ const pool = new Pool({
         rejectUnauthorized : false
     }
 });
-notifier = new NotificationCenter({
+var notifier = new NotificationCenter({
     withFallback: false,
     customPath: undefined
 });
