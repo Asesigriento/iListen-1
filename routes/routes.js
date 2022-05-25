@@ -53,7 +53,7 @@ if(nombre_register && pass_register){
         });*/
         try{
         const client = await pool.connect();
-        const result = await client.query("INSERT INTO usuarios(nombre,password) VALUES('Daniel','1234');",(err,rest)=>{
+        const result = await client.query("INSERT INTO usuarios(nombre,password) VALUES('{Daniel}','{1234}');",(err,rest)=>{
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
