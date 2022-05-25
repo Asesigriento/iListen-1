@@ -29,18 +29,6 @@ router.get('/home',function(req,res){
     res.sendFile(path.join(__dirname + '/../views/principal.html'));
 });
 
-
-//Conexión a BBDD
-router.post('/connect', async(req,res)=>{
-    try{
-        const client = await pool.connect();
-        res.send("BBDD conectado");
-    }
-    catch(error){
-        console.log(error);
-    }
-});
-
 //Registro de usuario
 router.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
@@ -57,6 +45,7 @@ if(nombre_register && pass_register){
                console.log(err);
            }
            else{
+               console.log(rest);
             pool.end();
             rest.send("registro exitoso")
            }
