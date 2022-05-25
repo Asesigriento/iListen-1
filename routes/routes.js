@@ -40,7 +40,7 @@ router.post('/reg',urlencodedParser,async(req,res)=>{
 if(nombre_register && pass_register){
     try{
         const client = await pool.connect();
-        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,rest)=>{
+        const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?);",[nombre_register,pass_register],(err,rest)=>{
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
