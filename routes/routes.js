@@ -38,7 +38,9 @@ router.post('/reg',urlencodedParser,async(req,res)=>{
 
     try{
 if(nombre_register && pass_register){
-    try{
+    res.send(nombre_register);
+    res.send(pass.pass_register);
+    /*try{
         const text = "INSERT INTO usuarios(nombre,password) VALUES($1,$2) RETURNING *";
         const values = [nombre_register,pass_register];
         const client = await pool.connect();
@@ -49,7 +51,7 @@ if(nombre_register && pass_register){
             else{
                 console.log(res.rows[0]);
             }
-        });
+        });*/
         /*const result = await client.query("INSERT INTO usuarios(nombre,password) VALUES(?,?);",[nombre_register,pass_register],(err,rest)=>{
            if(err){
                console.log("No se ha introducido nada");
@@ -66,13 +68,14 @@ if(nombre_register && pass_register){
         client.release();
         //Lleva a la página principal de la web
       }*/
-    }
+    /*}
     catch (error){
         console.error(error);
         res.send("Error " + error);
-    }
+    }*/
 
 }
+
     }
 catch(error){console.log(error);}
 
