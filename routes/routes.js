@@ -34,6 +34,7 @@ router.get('/home',function(req,res){
 router.post('/connect', async(req,res)=>{
     try{
         const client = await pool.connect();
+        res.send("BBDD conectado");
     }
     catch(error){
         console.log(error);
