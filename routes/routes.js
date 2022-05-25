@@ -24,7 +24,7 @@ conexion.connect();*/
 //middleware
 var urlencodedParser = bodyParser.urlencoded({extended:true})
 //Rutas
-router.post('connect',async(req,res)=>{
+router.post('/connect',async(req,res)=>{
     try{
         const client = await pool.connect();
         const result = await client.query('SELECT * FROM usuarios');
