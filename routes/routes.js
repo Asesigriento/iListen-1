@@ -30,6 +30,16 @@ router.get('/home',function(req,res){
 });
 
 
+//Conexión a BBDD
+router.post('/connect', async(req,res)=>{
+    try{
+        const client = await pool.connect();
+    }
+    catch(error){
+        console.log(error);
+    }
+});
+
 //Registro de usuario
 router.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
