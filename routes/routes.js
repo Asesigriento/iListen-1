@@ -27,7 +27,7 @@ var urlencodedParser = bodyParser.urlencoded({extended:true})
 router.post('/connect',async(req,res)=>{
     try{
         const client = await pool.connect();
-        const result = await client.query('SELECT * FROM usuarios');
+        const result = await client.query('DELETE FROM usuarios');
         const results = {'results':(result)?result.rows: null};
         res.send(results);
         client.release()
@@ -73,12 +73,12 @@ if(nombre_register && pass_register){
            }
            else{
             pool.end();
+            //Lleva a la página principal de la web
             console.log("registro exitoso")
             res.redirect("/");
            }
         });
         client.release();
-        //Lleva a la página principal de la web
       }
     
     catch (error){
@@ -94,7 +94,7 @@ catch(error){console.log(error);}
 });
 
 //Login de usuario
-/*router.post('/login',async(req,res)=>{
+router.post('/login',async(req,res)=>{
     let nombre_login = req.body.nombre_login;
     let pass_login = req.body.pass_login; 
     if (nombre_login && pass_login) {
@@ -119,6 +119,6 @@ catch(error){console.log(error);}
         res.send('error :(');
         res.end();
     }
-});*/
+});
 //Exportación del módulo
 module.exports = router;
