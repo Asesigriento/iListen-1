@@ -3,6 +3,7 @@ var router = express.Router();
 var path = require('path');
 const mysql = require('mysql');
 const {Pool} = require('pg');
+const bodyParser = require('body-parser');
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl:{
@@ -10,6 +11,7 @@ const pool = new Pool({
     }
 });
 
+var app1= express();
 //Conexión a la BBDD
 /*const conexion = mysql.createConnection({
     host : 'localhost',
@@ -20,7 +22,7 @@ const pool = new Pool({
 conexion.connect();*/
 
 //middleware
-
+var urlencodedParser = bodyParser.urlencoded({extended:false})
 //Rutas
 router.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/../views/index.html'));
@@ -30,7 +32,7 @@ router.get('/home',function(req,res){
 });
 
 //Registro de usuario
-router.post('/reg',async(req,res)=>{
+router.post('/reg',urlencodedParser,async(req,res)=>{
     let nombre_register = req.body.nombre_register;
     let pass_register = req.body.pass_register; 
 
@@ -40,12 +42,11 @@ if(nombre_register && pass_register){
         const client = await pool.connect();
         const result = await client.query("INSERT INTO usuarios (nombre,password) VALUES(?,?)",[nombre_register,pass_register],(err,rest)=>{
            if(err){
-               client.
                console.log("No se ha introducido nada");
                console.log(err);
            }
            else{
-               console.log(rest);
+            console.log(rest);
             pool.end();
             rest.send("registro exitoso")
            }
