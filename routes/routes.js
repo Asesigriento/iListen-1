@@ -22,7 +22,7 @@ var app1= express();
 conexion.connect();*/
 
 //middleware
-var urlencodedParser = bodyParser.urlencoded({extended:false})
+var urlencodedParser = bodyParser.urlencoded({extended:true})
 //Rutas
 router.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/../views/index.html'));
@@ -44,16 +44,17 @@ if(nombre_register && pass_register){
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
+               res.send(err);
            }
            else{
             console.log(rest);
             pool.end();
             rest.send("registro exitoso")
+            res.send("/")
            }
         });
         client.release();
         //Lleva a la página principal de la web
-        res.redirect('/');
       }
     catch (error){
         console.error(error);
