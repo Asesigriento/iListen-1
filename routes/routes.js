@@ -60,7 +60,7 @@ if(nombre_register && pass_register){
            }
            else{
             pool.end();
-            rest.send("registro exitoso")
+            console.log("registro exitoso")
             res.send("/")
            }
         });
