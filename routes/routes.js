@@ -70,12 +70,13 @@ if(nombre_register && pass_register){
                res.send(err);
            }
            else{
-            pool.end();
+         
             //Lleva a la página principal de la web
             console.log("registro exitoso");
             res.redirect("/");
            }
         });
+        pool.end();
         client.release();
       }
     
