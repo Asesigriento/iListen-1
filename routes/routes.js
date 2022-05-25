@@ -39,7 +39,7 @@ router.post('/reg',urlencodedParser,async(req,res)=>{
     try{
 if(nombre_register && pass_register){
     res.send(nombre_register);
-    res.send(pass.pass_register);
+    res.send(pass_register);
     /*try{
         const text = "INSERT INTO usuarios(nombre,password) VALUES($1,$2) RETURNING *";
         const values = [nombre_register,pass_register];
