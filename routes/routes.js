@@ -35,10 +35,11 @@ router.get('/home',function(req,res){
 router.post('/reg',urlencodedParser,async(req,res)=>{
     let nombre_register = req.body.nombre_register;
     let pass_register = req.body.pass_register; 
+    const body= [nombre_register,pass_register];
 
     try{
 if(nombre_register && pass_register){
-    res.send(nombre_register,pass_register);
+    res.send(body);
     /*try{
         const text = "INSERT INTO usuarios(nombre,password) VALUES($1,$2) RETURNING *";
         const values = [nombre_register,pass_register];
