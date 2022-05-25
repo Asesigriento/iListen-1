@@ -24,6 +24,19 @@ conexion.connect();*/
 //middleware
 var urlencodedParser = bodyParser.urlencoded({extended:true})
 //Rutas
+router.post('connect',function(req,res){
+    try{
+        const client = await.pool.connect();
+        const result = await client.query('SELECT * FROM usuarios');
+        const results = {'results':(result)?result.rows: null};
+        res.send(results);
+        client.release()
+    }
+    catch(err){
+        console.error(err);
+        res.send("Error"+err);
+    }
+});
 router.get('/', function(req,res){
     res.sendFile(path.join(__dirname+'/../views/index.html'));
 });
