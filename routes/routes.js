@@ -101,11 +101,11 @@ router.post('/login',async(req,res)=>{
         const client = await pool.connect();
 	    const result = await client.query("SELECT nombre,password FROM usuarios WHERE nombre= '{"+nombre_login+"}', password='{"+pass_login+"}' ",function(error, results,fields) {
 	    if (error) {
-            console.log("Login no funciona")
+            console.log("Login no funciona");
             throw error;
         }
         else {
-        
+        pool.end();
 		res.send("/home");
 		}		
     });	
