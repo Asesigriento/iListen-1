@@ -1,21 +1,16 @@
 var express = require('express');
 var router = express.Router();
-const NotificationCenter = require('node-notifier').NotificationCenter;
+const notifier = require('node-notifier');
 var path = require('path');
 const mysql = require('mysql');
 const {Pool, Client} = require('pg');
 const bodyParser = require('body-parser');
 
-const { executionAsyncResource } = require('async_hooks');
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl:{
         rejectUnauthorized : false
     }
-});
-var notifier = new NotificationCenter({
-    withFallback: false,
-    customPath: undefined
 });
 var app1= express();
 //Conexión a la BBDD
@@ -75,32 +70,14 @@ if(nombre_register && pass_register){
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
+               notifier.notify('No te has podido registrar has registrado correctamente')
                res.send(err);
            }
            else{
             pool.end();
             //Lleva a la página principal de la web
-            console.log("registro exitoso")
-            notifier.notify({
-                title: "registro exitoso",
-                subtitle: undefined,
-                message: "el usuario ha sido registrado con exito",
-                sound:false,
-                icon:"Terminal Icon",
-                contentImage: undefined,
-                open: undefined,
-                wait: false,
-                timeout: 5,
-                closeLabel: undefined,
-                actions: undefined,
-                dropdownLabel: undefined,
-                reply: false
-            },
-            function(error,response,metadata){
-                console.log(response,metadata)
-            }
-            );
-            
+            console.log("registro exitoso");
+            notifier.notify('Te has registrado correctamente')
             res.redirect("/");
            }
         });
