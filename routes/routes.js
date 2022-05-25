@@ -99,7 +99,7 @@ router.post('/login',async(req,res)=>{
     let pass_login = req.body.pass_login; 
     if (nombre_login && pass_login) {
         const client = await pool.connect();
-	    const result = await client.query("SELECT nombre,password FROM usuarios WHERE nombre= '{"+nombre_login+"}', password='{"+pass_login+"}' ",function(error, results,fields) {
+	    const result = await client.query("SELECT nombre,password FROM usuarios WHERE nombre= '{"+nombre_login+"}'AND password='{"+pass_login+"}' ",function(error) {
 	    if (error) {
             console.log("Login no funciona");
             throw error;
