@@ -1,10 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const notifier = require('node-notifier');
 var path = require('path');
 const mysql = require('mysql');
 const {Pool, Client} = require('pg');
-const bodyParser = require('body-parser');
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
@@ -12,7 +10,7 @@ const pool = new Pool({
         rejectUnauthorized : false
     }
 });
-var app1= express();
+
 //Conexión a la BBDD
 /*const conexion = mysql.createConnection({
     host : 'localhost',
@@ -23,7 +21,6 @@ var app1= express();
 conexion.connect();*/
 
 //middleware
-var urlencodedParser = bodyParser.urlencoded({extended:true})
 //Rutas
 router.post('/connect',async(req,res)=>{
     try{
@@ -46,7 +43,7 @@ router.get('/home',function(req,res){
 });
 
 //Registro de usuario
-router.post('/reg',urlencodedParser,async(req,res)=>{
+router.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
     let pass_register = req.body.pass_register; 
 
@@ -70,14 +67,12 @@ if(nombre_register && pass_register){
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
-               notifier.notify('No te has podido registrar has registrado correctamente')
                res.send(err);
            }
            else{
             pool.end();
             //Lleva a la página principal de la web
             console.log("registro exitoso");
-            notifier.notify('Te has registrado correctamente')
             res.redirect("/");
            }
         });
