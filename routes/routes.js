@@ -67,16 +67,19 @@ if(nombre_register && pass_register){
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
+               pool.end();
+               client.release();
                res.send(err);
            }
            else{
             //Lleva a la página principal de la web
             console.log("registro exitoso");
+            pool.end();
+            client.release();
             res.redirect("/");
            }
         });
-        pool.end();
-        client.release();
+        
       }
     
     catch (error){
