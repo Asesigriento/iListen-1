@@ -106,7 +106,7 @@ router.post('/login',async(req,res)=>{
 	    if (error) {
             console.log("Login no funciona");
             pool.end();
-            throw error;
+            res.send(error);
         }
         else {
         pool.end();
