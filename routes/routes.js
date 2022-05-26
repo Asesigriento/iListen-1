@@ -41,7 +41,9 @@ router.get('/', function(req,res){
 router.get('/home',function(req,res){
     res.sendFile(path.join(__dirname + '/../views/principal.html'));
 });
-
+router.post('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/../views/index.html'));
+});
 //Registro de usuario
 router.post('/reg',async(req,res)=>{
     let nombre_register = req.body.nombre_register;
@@ -103,6 +105,7 @@ router.post('/login',async(req,res)=>{
 	    const result = await client.query("SELECT nombre,password FROM usuarios WHERE nombre= '{"+nombre_login+"}'AND password='{"+pass_login+"}' ",function(error) {
 	    if (error) {
             console.log("Login no funciona");
+            pool.end();
             throw error;
         }
         else {
