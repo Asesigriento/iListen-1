@@ -70,14 +70,14 @@ if(nombre_register && pass_register){
            if(err){
                console.log("No se ha introducido nada");
                console.log(err);
-               pool.end();
+               //pool.end();
                client.release();
                res.send(err);
            }
            else{
             //Lleva a la página principal de la web
             console.log("registro exitoso");
-            pool.end();
+            //pool.end();
             client.release();
             res.redirect("/");
            }
@@ -106,12 +106,12 @@ router.post('/login',async(req,res)=>{
 	    const result = await client.query("SELECT nombre,password FROM usuarios WHERE nombre= '{"+nombre_login+"}'AND password='{"+pass_login+"}' ",function(error) {
 	    if (error) {
             console.log("Login no funciona");
-            pool.end();
+            //pool.end();
             res.send(error);
         }
         else {
-        pool.end();
-		res.redirect("/home");
+            //pool.end();
+		    res.redirect("/home");
 		}		
     });	
     }else{
