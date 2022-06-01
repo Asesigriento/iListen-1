@@ -2,8 +2,25 @@
 Web application by Andre and Dani
 
 
-Añadir:
-    Botón para subir audio
-    No permitir que los archivos que suba el usuario sean diferentes al formato MP3
-    Chequear el tipo de archivo y extensión
-    Analizar archivo subido,  recrearlo y renombrarlo 
+python:
+	Boton de cancuines
+	boton de play
+	boton de siguiente
+	boton de anterior
+	boton de volumen
+	
+Web: 
+	ver si el usuario está repetido
+	que el login funcione bien
+	utilizar métodos para que las canciones 
+	se añadan automáticamente
+	poner rutas para los botones	
+	añadir boton de instalacion de la 
+	aplicacion python
+qué tiene que saber André?
+General:
+	Github
+Web:
+	Node.js, Heroku
+Python:
+	??
