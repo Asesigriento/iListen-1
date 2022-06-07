@@ -1,13 +1,5 @@
 # iListen
 Web application by Andre and Dani
-
-
-python:
-	Boton de cancuines
-	boton de play
-	boton de siguiente
-	boton de anterior
-	boton de volumen
 	
 Web: 
 	ver si el usuario está repetido
