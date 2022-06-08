@@ -393,7 +393,7 @@ musica.addEventListener('timeupdate',()=>{
         wave.classList.add('activar2');
         index ++;
       /*---------------------------------------------------------*/
-      musica.src=`/musica/${index}.mp3`;
+      musica.src=`../musica/${index}.mp3`;
       portada_reproductor.src = `/images/portadas/${index}.jpg` ;
       /*---------------------------------------------------------*/
         musica.play();
@@ -459,7 +459,7 @@ musica.addEventListener('timeupdate',()=>{
         }
 
       /*---------------------------------------------------------*/
-      musica.src=`/${index}.mp3`;
+      musica.src=`../musica/${index}.mp3`;
       portada_reproductor.src = `/images/portadas/${index}.jpg` ;
       /*---------------------------------------------------------*/
         musica.play();
