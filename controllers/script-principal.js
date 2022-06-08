@@ -26,8 +26,8 @@ let cancion=document.createElement('audio');
 let todas_canciones=[
 {
     nombre: "primera cancion",
-    path: "music/rojunana.mp3",
-    img: "img/roju.jpg",
+    path: "music/Tevvez-Quasar.mp3",
+    img: "img/quasar.jpg",
     cantante: "primer cantante"
 },
 {

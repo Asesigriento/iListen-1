@@ -1,0 +1,865 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/concert.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: none;
+}
+
+
+/*
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/concert.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: none;
+}
+*/
+
+
+
+/*CABECERA*/
+header{
+    border-radius: 10px;
+    width: 85%;
+    height: 95%;
+
+    border: 1px solid #fff;
+
+    /*La propiedad CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar
+    el espacio disponible.*/ 
+    display: flex;
+
+    /*Define si los elementos flexibles se fuerzan en una sola línea o se pueden distribuir en varias líneas.
+     Si se establece en varias líneas, también define el eje transversal que determina la dirección en la que se
+    apilan las nuevas línea*/
+    flex-wrap: wrap;
+
+    /*Esta propiedad especifica si recortar el contenido o agregar barras de desplazamiento cuando el contenido de un elemento es demasiado grande para caber en el área especificada.*/
+    /*HIDDEN: El desbordamiento se recorta y el resto del contenido será invisible*/
+    overflow: hidden;
+}
+
+header .lado_menu, .lado_cancion{
+position: relative;
+width: 25%;
+height: 90%;
+background-color: rgba(95, 97, 102, 0.5);
+box-shadow:  5px 0px 2px rgb(73, 73, 73);
+color: rgb(255, 255, 255);
+}
+
+header .lado_cancion{
+    width: 75%;
+    background-color:rgba(95, 97, 102, 0.5);
+    /*background-color:rgba(95, 97, 102, 0.5);*/
+}
+
+/***************************LINKS BARRA DE NAVEGACIÓN******************************/
+header .lado_cancion ul li a{
+    text-decoration: none;
+    color: rgb(184, 179, 179);
+    /*background-color:rgba(95, 97, 102, 0.5);*/
+}
+
+header .lado_cancion ul li a:hover{
+    text-decoration: none;
+    color: rgb(255, 251, 251);
+    /*background-color:rgba(95, 97, 102, 0.5);*/
+}
+
+
+header .reproducir{
+    width: 100%;
+    height: 10%;
+    /*///////////////EFECTO TRANSPARENCIA "rgba".////////////////// */
+    background-color: rgba(95, 97, 102, 0.5);
+
+    box-shadow: 0px 3px 8px rgb(133, 133, 133);
+}
+
+header .lado_menu h1{
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+    font-weight: 500;
+}
+
+header .lado_menu .lista_canciones{
+ margin: 40px 0px 0px 20px;
+}
+
+header .lado_menu .lista_canciones h4{
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #a3a39e;
+    transition: .3s linear;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+header .lado_menu .lista_canciones h4:hover{
+    color: rgb(248, 247, 245);
+}
+
+header .lado_menu .lista_canciones h4 span{
+    position: relative;
+    margin-right: 35px ;
+}
+
+header .lado_menu .lista_canciones h4 span::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #626360;
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+
+header .lado_menu .lista_canciones h4:hover span::before{
+    border: 2px solid #c7c4c4;
+}
+
+header .lado_menu .lista_canciones h4 .bi{
+    display: none;
+}
+
+
+header .lado_menu .lista_canciones .activar{
+    color: rgb(159, 161, 161)
+}
+
+header .lado_menu .lista_canciones .activar span{
+    display: none;
+}
+
+header .lado_menu .lista_canciones .activar .bi{
+    display: flex;
+    margin-right: 20px;
+}
+
+/* ////////////// LADO IZQUIERDA DE CANCIONES /////////*/
+header .lado_menu .menu_canciones {
+    width: 100%;
+    height: 430px;
+   /* border: 1px solid rgb(134, 130, 130);*/
+    margin-top:40px ;
+}
+
+header .lado_menu .menu_canciones li{
+    position: relative;
+    list-style-type: none;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+
+header .lado_menu .menu_canciones li:hover{
+    background-color: rgba(95, 97, 102, 0.5);
+}
+
+header .lado_menu .menu_canciones li span{
+   font-size: 12px;
+   font-weight: 600;
+   color:rgb(96, 97, 99);
+}
+
+header .lado_menu .menu_canciones li img{
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+}
+
+header .lado_menu .menu_canciones li h5{
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+header .lado_menu .menu_canciones li h5 .subtitulo{
+    font-size: 9px;
+    color:#a3a39e;
+  }
+  
+  header .lado_menu .menu_canciones li .bi{
+    position: absolute;
+    color:#bbbbb6;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+  }
+
+  header  .reproducir {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+  }
+
+  header  .reproducir .wave {
+    width: 30px;
+    height: 30px;
+   /* border: 1px solid #fff;*/
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+  }
+
+  header .reproducir .wave .wave1{
+    width: 3px;
+    height: 15px;
+    margin-right: 4px;
+    /* top left, top right, debajo derecho, debajo izquierdo */
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(242, 243, 243, 0.945);
+    animation: unset;
+  }
+
+  header .reproducir .wave .wave1:nth-child(2){
+    height: 13px;
+    /*animation-delay: .4s;*/
+  }
+
+  header .reproducir .wave .wave1:nth-child(3){
+    height: 8px;
+    /*animation-delay: .8s;*/
+  }
+
+
+
+ /*JS class wave (OLAS ANIMACION)*/
+ header .reproducir .activar2 .wave1{
+    animation: wave .5s linear infinite;
+}
+
+header .reproducir .activar2 .wave1:nth-child(2){
+    animation-delay: .4s;
+}
+
+header .reproducir .activar2 .wave1:nth-child(3){
+    animation-delay: .8s ;
+}
+
+
+/* permite a los autores controlar los pasos intermedios en un
+secuencia de animación CSS mediante el establecimiento de keyframes 
+(o puntos de trayectoria)*/
+
+  @keyframes wave{
+      0%{
+            height: 10px;
+      }
+      50%{
+            height: 15px;
+      }
+      100%{
+            height: 10px;
+      }
+    }
+
+    header .reproducir img{
+        width: 35px;
+        height: 35px;
+    }
+   
+    header .reproducir h5{
+        width: 130px;
+        font-size: 13px;
+        margin-left: 15px;
+        color: #fff;
+        line-height: 15px;
+    }
+
+    header .reproducir h5 .subtitulo{
+        font-size: 11px;
+        color: #a3a39e;
+    }
+
+    header .reproducir .icono{
+        font-size: 25px;
+        color: #fff;
+        margin: 0px 20px 0px 40px;
+    }
+
+    header .reproducir .icono  .bi{
+        cursor: pointer;
+        outline: none;
+    }
+
+    header .reproducir .icono  .bi:nth-child(2){
+       /* border: 1px solid rgb(42, 44, 44);*/
+        /*border-radius: 50%;*/
+        padding: 1px 3px 0px 6px;
+        margin: 0px 5px;
+        transition: .3s linear;
+    }
+
+    header .reproducir span{
+        color:rgb(250, 248, 248);
+        width: 32px;
+        font-size: 11px;
+        font-weight: 400;
+    }
+
+    /* ////////////// BARRA REPRODUCTORA DE MÚSICA ////////////////////*/
+    header .reproducir #tiempoInicio{
+        margin: 0px 0px 0px 20px;
+    }
+
+    header .reproducir .barra{
+        position: relative;
+        width: 43%;
+        height: 2px;
+        background: rgb(144, 152, 153);
+        margin: 0px 15px 0px 10px;
+    }
+
+    
+    header .reproducir .barra .bar2{
+        position: absolute;
+        background: #f7f7f8;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        /*transition: 1s linear;*/
+    }
+
+    header .reproducir .barra .punto{
+        position: absolute;
+       width: 5px;
+       height: 5px;
+       background: #f8f8f8;
+       border-radius: 50%;
+       left: 0%;
+       top: -1px;
+       transition: 1s linear;
+    }
+
+    
+    header .reproducir .barra .punto::before{
+        content: '';
+        position: absolute;
+       width: 15px;
+       height: 15px;
+       border:1px solid  #f7f8f8;
+       border-radius: 50%;
+       left: -6px;
+       top: -6px;
+       transition: 1s linear;
+       box-shadow: inset 0px 0px 3px #f7f8f8;
+    }
+
+
+    header .reproducir .barra input{
+        position: absolute;
+        width: 100%;
+        top: -6px;
+        left: 0;
+        cursor: pointer;
+        z-index: 99999999;
+        transition: 3s linear;
+        opacity: 0;
+    }
+    /*************************************************************************/
+
+/*////////////////////////////VOLUMEN//////////////////////////////*/
+    header .reproducir .vol{
+        position: relative;
+        width: 100px;
+        height: 2px;
+        margin-left: 50px;
+        background:#626360; 
+    }
+
+    header .reproducir .vol .bi{
+       position: absolute;
+       color: white;
+       font-size: 25px;
+       top: -17px;
+       left: -30px;
+    }
+
+    header .reproducir .vol input{
+        position: absolute;
+        width: 100%;
+        top: -10px;
+        left: 0;
+        cursor: pointer;
+        z-index: 99999999;
+        transition: 3s linear;
+        opacity: 0;
+    }
+
+    header .reproducir .vol .volumen_barra{
+        position: absolute;
+        background: #f6f7f8;
+        width: 0%;
+        height: 100%;
+        top: 0;
+       /* transition: 1s linear;*/
+    }
+
+    header .reproducir .vol .punto_volumen{
+        position: absolute;
+       width: 5px;
+       height: 5px;
+       background: #f8f8f8;
+       border-radius: 50%;
+       left: 0%;
+       top: -1px;
+       transition: 1s linear;
+    }
+
+    
+    header .reproducir .vol .punto_volumen::before{
+        content: '';
+        position: absolute;
+       width: 15px;
+       height: 15px;
+       border:1px solid  #f8f8f8;
+       border-radius: 50%;
+       left: -6px;
+       top: -6px;
+       transition: 1s linear;
+       box-shadow: inset 0px 0px 3px #fafafa;
+    }
+
+
+    /*/////////////////BARRA DE NAVEGACION/////////////////////////*/
+
+    header .lado_cancion{
+        z-index: 2;
+    }
+
+    header .lado_cancion::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        background: url('../images/fondomusicas.jpg'); 
+        z-index: -1;
+        filter: blur(50px)
+    }
+
+
+    header .lado_cancion nav{
+      width: 90%;
+      height: 10%;
+      margin: auto;
+      /*border: 1px solid rgb(153, 25, 25);*/
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header .lado_cancion nav ul{
+        display: flex;
+    }
+
+    header .lado_cancion nav li{
+        position: relative;
+        list-style: none;
+        font-size: 13px;
+        color: #a7a8a2;
+        margin-right: 25px;
+        cursor: pointer;
+        transition: .3s linear;
+    }
+
+    header .lado_cancion nav li:hover{
+        color:white;
+    }
+
+    header .lado_cancion nav li:nth-child(1){
+        color:white;
+    }
+
+    header .lado_cancion nav ul li span{
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        background-color: #b8babb;
+        bottom: -5px;
+        left: 0;
+        border-radius: 20px;
+    }
+
+
+/*/////////////BUSCADOR ////////////*/
+    header .lado_cancion nav .buscador{
+      position: relative;
+      width: 40%;
+      padding: 1px 10px;
+      border-radius: 20px;
+      color: gray;
+    }
+
+    header .lado_cancion nav .buscador::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background-color: rgba(95, 97, 102, 0.5);
+
+        /*permite aplicar efectos gráficos como el desenfoque o el
+         cambio de color al área detrás de un elemento*/
+        backdrop-filter: blur(5px);
+
+
+        /*indica el orden de un elemento posicionado y sus descendientes.
+        Cuando varios elementos se superponen, los elementos con mayor
+        valor z-index cubren aquellos con menor valor.*/
+        z-index: -1;
+      }
+
+      header .lado_cancion nav .buscador .bi{
+          font-size: 13px;
+          padding: 3px 0px 0px 10px ;
+      }
+
+      header .lado_cancion nav .buscador input{
+          background:none;
+          outline: none;
+          border: none;
+          padding: 0px 10px;
+          color: white;
+          font-size: 12px;
+        }
+
+        /*PARA QUE SALGA UNA OPCION DEBAJO AL PULSAR BUSCADOR.*/
+        header .lado_cancion nav .buscador .resultado_busqueda{
+          position: absolute;
+          width: 100%;
+          height: 200px;
+         /* border: 1px solid #fff;*/
+          margin-top: 10px;
+          border-radius: 15px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start ;
+          flex-direction: column;
+          overflow: auto;
+          }
+
+        header .lado_cancion nav .buscador .resultado_busqueda::-webkit-scrollbar{
+        display: none;
+        }
+
+        header .lado_cancion nav .buscador .resultado_busqueda .tarjeta{
+        width: 100%;
+        min-height: 45px;
+       /* border: 1px solid #fff;*/
+        display: none;
+        align-items: center;
+        padding: 0px 5px ;
+        text-decoration: none;
+        background: rgba(184, 184, 184, .1);
+        margin-bottom: 5px;
+        }
+
+        header .lado_cancion nav .buscador .resultado_busqueda .tarjeta img{
+        width: 35px;
+        height: 35px;
+        border-radius: 5px ;
+        }
+
+
+        header .lado_cancion nav .buscador .resultado_busqueda .tarjeta .contenido{
+       width: 80%;
+       height: 100%;
+      /* border: 1px solid #fff;*/
+       padding: 0;
+       font-size: 13px;
+       font-weight: 600;
+       color: #fff;
+       display: flex;
+       align-items: flex-start;
+       justify-content: center;
+       flex-direction: column;
+       }
+    
+   header .lado_cancion nav .buscador .resultado_busqueda .tarjeta .contenido .subtitulo{
+      font-size: 11px;
+        color:#989b9c;
+        font-weight: 500 ;
+    }
+        
+
+/*////////////////////USUARIO////////////////////////
+
+header .lado_cancion nav .usuario{
+       position: relative;
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       cursor: pointer;
+}
+
+header .lado_cancion nav .usuario img{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    /*añade efectos de sombra alrededor del marco de un elemento. 
+    Se pueden definir múltiples efectos separados por comas.
+    La caja de la sombra se describe por los desplazamientos
+    en X e Y, los radios de desenfoque y dispersión, y el color
+     relativos al elemento.*/
+
+     
+    /*    -x | -y | radio de desenfoque | color */
+   /*   box-shadow: 2px 2px 35px  #f5f7f4;
+}   */
+
+
+
+    /*OTRO USUARIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO*/
+    header .user{
+        position:relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 92%;
+        margin-top: 5px;
+    }
+    
+    header  .user img{
+     position: relative;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+    
+     /*añade efectos de sombra alrededor del marco de un elemento. 
+     Se pueden definir múltiples efectos separados por comas.
+     La caja de la sombra se describe por los desplazamientos
+     en X e Y, los radios de desenfoque y dispersión, y el color
+      relativos al elemento.*/
+    
+     /*    -x | -y | radio de desenfoque | color */
+     box-shadow: 2px 2px 35px  #f5f7f4;
+    }
+    
+    
+
+
+/*------------CONTENIDO CABECERA ----------------*/
+header .lado_cancion .contenido{
+    width: 90%;
+    height: 30%;
+    margin: auto;
+    /*border: 1px solid white;*/
+    padding-top: 20px;
+}
+
+header .lado_cancion .contenido h1{
+   font-size: 25px;
+   font-weight: 600;
+}
+
+header .lado_cancion .contenido p{
+    font-size: 11px;
+    font-weight: 400;
+    color: rgb(160, 154, 155);
+    margin: 5px;
+ }
+
+ header .lado_cancion .contenido .botones{
+    margin-top: 15px;
+ }
+
+ header .lado_cancion .contenido .botones button{
+    width: 130px;
+    height: 32px; /*Subir letra boton*/
+    border: 2px solid rgba(189, 189, 192, 0.5);
+    outline: none;
+    border-radius: 20px;
+    background-color:rgba(15, 15, 15, 0.493);
+    color: white;
+    cursor: pointer;
+    transition: .3s linear;
+ }
+
+ header .lado_cancion .contenido .botones button:hover{
+        border: 2px solid rgba(189, 189, 192, 0.5);
+        background: none;
+        color: rgba(189, 189, 192, 0.5);
+ }
+ 
+/*/////////////////////////////////////////////////////////
+ header .lado_cancion .contenido .botones button:nth-child(2){
+    background: none;
+    color:rgba(223, 228, 230, 0.493);
+}
+ 
+header .lado_cancion .contenido .botones button:nth-child(2):hover{
+    border: 2px solid rgba(189, 189, 192, 0.5);
+    background-color:rgba(189, 189, 192, 0.5);
+    color: white;
+}
+////////////////////////////////////////////////////////////*/
+ 
+/*/////////////////CANCIONES POPULARES//////////////////*/
+
+header .lado_cancion .canciones_populares{
+    width: 90%;
+    height: auto;
+    /*border: 1px solid white;*/
+    margin: auto;
+    margin-top: 15px;
+}
+
+header .lado_cancion .canciones_populares .can_popu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .lado_cancion .canciones_populares .can_popu .bi{
+    color:#acafa5;
+    cursor: pointer;
+    transition:  .3s linear;
+}
+
+header .lado_cancion .canciones_populares .can_popu .bi:hover{
+    color:#e8e9e7;
+}
+
+header .lado_cancion .canciones_populares .canciones_popu{
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+    display: flex;
+    /* PARA QUE APAREZCA UNA BARRA DE SCROLL EN TODA LA DIVISION*/
+    overflow-x: auto ;
+    scroll-behavior: smooth;
+}
+
+/* ********** OCULTAR LAS BARRAS DE SCROLL ***************** */
+header .lado_cancion .canciones_populares .canciones_popu::-webkit-scrollbar{
+   display: none;
+}
+
+header .lado_cancion .canciones_populares .canciones_popu li{
+  min-width: 100px;
+  height: 140px;
+  list-style-type:none ;
+  margin-right: 10px;
+  transition: .3s linear;
+}
+
+header .lado_cancion .canciones_populares .canciones_popu li:hover{
+    background:rgba(189, 189, 192, 0.5);
+}
+  
+
+header .lado_cancion .canciones_populares .canciones_popu li .imagen_reproducir{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .lado_cancion .canciones_populares .canciones_popu li .imagen_reproducir img{
+    width: 100%;
+    height: 100%;
+}
+
+
+header .lado_cancion .canciones_populares .canciones_popu li .imagen_reproducir .bi{
+   position: absolute;
+   font-size: 20px;
+   cursor: pointer;
+   transition:  .3s linear;
+   opacity: 0;
+}
+
+header .lado_cancion .canciones_populares .canciones_popu li .imagen_reproducir:hover .bi{
+    opacity: 1;
+ }
+ 
+ header .lado_cancion .canciones_populares .canciones_popu li h5{
+     padding:  5px 0px  0px  5px ;
+     line-height: 15px;
+     font-size: 10px;
+ }
+
+ header .lado_cancion .canciones_populares .canciones_popu li h5 .subtitulo{
+    font-size: 9px;
+    color:#a5a7a2;
+}
+
+/*////////////////////////////////// ARTISTAS POPULARES ///////////////////////*/
+
+header .lado_cancion .artistas_populares{
+    width: 90%;
+    height: auto;
+    /*border: 1px solid white;*/
+    margin: auto;
+    margin-top: 15px;
+}
+
+header .lado_cancion .artistas_populares .can_popu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .lado_cancion .artistas_populares .can_popu .bi{
+    color:#acafa5;
+    cursor: pointer;
+    transition:  .3s linear;
+}
+
+header .lado_cancion .artistas_populares .can_popu .bi:hover{
+    color:#e8e9e7;
+}
+
+header .lado_cancion .artistas_populares .artista{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+
+header .lado_cancion .artistas_populares .artista::-webkit-scrollbar{
+    display: none;
+}
+
+
+header .lado_cancion .artistas_populares .artista li{
+   list-style-type: none ;
+   position: relative;
+   min-width: 60px;
+   height: 60px;
+   background-color: #b0b2b3;
+   border-radius: 50%;
+   margin-right:  20px;
+   cursor: pointer;
+}
+
+header .lado_cancion .artistas_populares .artista li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+ }
+ 

@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iListen Concierto</title>
+    <!--BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!----------------->
+
+
+      <!--ICONOS BOOTSTRAP-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+   
+
+
+    <!--MDB (SIMILAR BOOTSTRAP)-->
+    <!--CSS--> <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css" rel="stylesheet" />
+    <!-- Font Awesome --> <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts --> <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!--------------------------->
+
+    <!--lINK CSS-->
+    <link rel="stylesheet" href="css/conciertos_estilo.css"  type="text/css">
+    <!----------------->
+
+</head>
+  <body>
+
+    <cabecera>
+      <nav class="navbar navbar-expand-lg  navbar-dark  bg-dark ps-5">
+        <div class="container-fluid">
+
+          <!--PARA PONER UNA IMAGEN A LADO DEL NOMBRE DE LA WEB-->
+          <a class="navbar-brand " href="#">   
+            <i class="bi bi-boombox">     iListen</i>
+              
+          </a>
+          <!------------------------------------------------------------>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../html/principal.html">Descubir Música </a>
+              </li>
+
+              <!--
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Porsiaca Links
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Link one</a></li>
+                  <li><a class="dropdown-item" href="#">Link two dog</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Siuuuuuuuuu</a></li>
+                </ul>
+              </li>
+              -->
+
+            </ul>
+            
+            <!--
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Buscar concierto" aria-label="Search">
+              <button class="btn btn-dark" type="submit" style="border: 1px solid white;">Buscar</button>
+            </form>
+            -->
+          </div>
+        </div>
+      </nav>
+    </cabecera>
+
+    
+<!--////////////////////////////////////PARTE DEL VIDEO///////////////////////////////-->
+      <header>
+        <!--//////////// OVERLAY: SIRVE PARA OPACAR EL FONDO//////-->
+        <div class="overlay">
+
+        </div>
+
+        <!--////////////////LETRA EN EL VIDEO////////////-->
+          <div class="letras">
+            <h1>Próximos conciertos.</h1>
+          </div>
+        <!--/////////////////////////////////////////////-->
+
+
+
+        <!--//////////////VIDEO//////////////-->
+          <video  autoplay loop muted>
+                <source src="video/videoconcierto.mp4" type="video/mp4">
+        <!--///////////////////////////////////-->
+          </video>
+      </header>
+<!--//////////////////////////////////// FIN PARTE DEL VIDEO ///////////////////////////////-->
+
+      <!--***********************************************************************************-->
+                    <!--********************CONTENIDO*****************************-->
+      <!--***********************************************************************************-->
+
+      <div class="container container-fluid ">
+
+          <div class="inicio">
+            <hr style="margin-top: 15px;">
+              <h1>Conciertos en Madrid</h1>
+          </div>
+
+          <!--///////////////////// IMAGENES Y CONCIERTOS (FECHAS) PRIMEROS 3 CUADROS /////////////////////-->
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+            <!--HG-->
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/hglivess.png" class="card-img-top" alt="hombresG">
+                <div class="card-body">
+                  <h5 class="card-title">Hombres G</h5>
+                  <p class="card-text">Es una banda española de pop rock con más de 30 años de trayectoria a sus espaldas y un legado inabarcable. Creada la formación en Madrid en 1982.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+
+                  <!--Boton modal-->
+               <div>
+                <p style="text-align: center;"> 
+                  <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#musicfestival">
+                  ver cartel
+                  </button>
+                </p>
+              </div>
+              <!--Fin boton modal-->
+
+              </div>
+            </div>
+            
+            <!--MADCOOL-->
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/madcool.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mad cool 2022</h5>
+                  <p class="card-text">Es un festival de música (rock, indie, electrónica, pop... ) que se realiza en Madrid desde el año 2016. El arte, la moda, la gastronomía y el turismo se unen eclécticamente en este festival.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+
+                <!--Boton modal-->
+                <div>
+                  <p style="text-align: center;"> 
+                    <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#madcool">
+                    ver vídeo
+                    </button>
+                  </p>
+                </div>
+                <!--Fin boton modal-->
+
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/madcoolsuns.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mad cool Sunset 2022</h5>
+                  <p class="card-text">Mad Cool Sunset concentra en una única jornada un cartel lleno de conciertos que tiene el objetivo de quedarse como una cita obligatoria dentro del calendario cultural madrileño.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+
+               <!--Boton modal-->
+               <div>
+                <p style="text-align: center;"> 
+                  <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#madcoolsunset">
+                  ver cartel
+                  </button>
+                </p>
+              </div>
+              <!--Fin boton modal-->
+
+
+              </div>
+            </div>
+          </div>
+          <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+            <!--///////////////////// IMAGENES Y CONCIERTOS (FECHAS) SEGUNDOS 3 CUADROS /////////////////////-->
+
+            <!--ROLLING STONE-->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/rolling.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Rolling Stones</h5>
+                    <p class="card-text">Los Stones siguen rodando, están de vuelta con su nuevo show por el continente europeo para tocar en estadios en lo que seguro se cuelga el cartel de sold out.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+                  <!--Boton modal-->
+               <div>
+                <p style="text-align: center;"> 
+                  <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#rollingstone">
+                  ver vídeo
+                  </button>
+                </p>
+              </div>
+              <!--Fin boton modal-->
+                </div>
+              </div>
+
+              <!--DUA LIPA-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/dualipa.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Dua Lipa</h5>
+                    <p class="card-text">FUTURE NOSTALGIA EU TOUR 2022. Dua Lipa estará por primera vez en solitario en nuestro recinto, presentando su nuevo álbum "Future Nostalgia".</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+
+                    <!--Boton modal-->
+                    <div>
+                      <p style="text-align: center;"> 
+                        <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#dualipa">
+                        ver vídeo
+                        </button>
+                      </p>
+                    </div>
+                    <!--Fin boton modal-->
+
+                </div>
+              </div>
+
+              <!--FESTIVAL NOCHES DEL BOTANICO-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="images/botanico.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Noches del Botánico</h5>
+                    <p class="card-text">El festival de las Noches del Botánico celebra su sexta edición del 8 de junio al 31 de julio de 2022 en el Real Jardín Botánico de Alfonso XIII localizado en la Universidad Complutense de Madrid.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                  </div>
+
+                    <!--Boton modal-->
+                    <div>
+                      <p style="text-align: center;"> 
+                        <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#botanicocartel">
+                        ver cartel
+                        </button>
+                      </p>
+                    </div>
+                    <!--Fin boton modal-->
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+              <!--///////////////////// IMAGENES Y CONCIERTOS (FECHAS) TERCEROS 3 CUADROS /////////////////////-->
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+
+            <!--CALAMARO-->
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/calamaro.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Andrés Calamaro</h5>
+                  <p class="card-text">El multipremiado artista argentino presentará por segunda vez los temas de su último trabajo Cargar la Suerte (WiZink Center. 28 junio 2022).</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+              </div>
+            </div>
+
+            <!--ROSALIA-->
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/rosalia.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Rosalia</h5>
+                  <p class="card-text">MOTOMAMI WORLD TOUR. ROSALÍA, ganadora de ocho premios Grammy y de un Grammy Latino, ha anunciado su primera gira mundial.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+
+                  <!--BOTON PARA EL USO DEL MODAL-->
+                  <!--Boton modal-->
+                  <div>
+                    <p style="text-align: center;"> 
+                      <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#rosalia">
+                      ver vídeo
+                      </button>
+                    </p>
+                  </div>
+                  <!--Fin boton modal-->
+                  <!--FIN DEL BOTON PARA EL USO DEL MODAL-->
+
+              </div>
+            </div>
+
+            <!--UNIVERSAL FEST-->
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/universal.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Universal Music Festival</h5>
+                  <p class="card-text">El escenario del Teatro Real acogerá en 2022 una nueva edición del Universal Music Festival, que una vez más reunirá durante el mes de julio las actuaciones de artistas de talla nacional e internacional.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+
+                <!--BOTON PARA EL USO DEL MODAL-->
+                  <!--Boton modal-->
+                  <div>
+                    <p style="text-align: center;"> 
+                      <button type="button" class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#musicfestival">
+                      ver cartel
+                      </button>
+                    </p>
+                  </div>
+                  <!--Fin boton modal-->
+                  <!--FIN DEL BOTON PARA EL USO DEL MODAL-->
+
+              </div>
+            </div>
+          </div>
+          <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+     
+
+       <!--///////////////////////////////////// MODALES //////////////////////////////////////////-->
+
+        <!--*********************** M O D A L ///  M A D C O O L ******************************-->
+        <!-- Modal -->
+        <div class="modal fade" id="madcool" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!--TAMAÑO DEL MODAL-->
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mad Cool 2022</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="text-align: center;">
+                <iframe width="760" height="515" src="https://www.youtube-nocookie.com/embed/wv7acU0OwhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Moda2 // MAD COOL SUNSET -->
+          <div class="modal fade" id="madcoolsunset" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!--TAMAÑO DEL MODAL-->
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Mad Cool Sunset 2022</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <img src="images/sunset_cartel.jpg" width="80%">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--****************************************************************************************-->
+
+        <!---------------------------------- UNIVERSAL MUSIC FESTIVAL ---------------------------->
+           <!-- Modal 3 -->
+        <div class="modal fade" id="musicfestival" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <!--TAMAÑO DEL MODAL-->
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Universal Music Festival</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="text-align: center;">
+                    <img src="images/universal_cartel.jpg">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------------------------------------------------------->
+
+        <!---------------------------------- ROLLING STONE ---------------------------->
+             <!-- Modal 4 -->
+             <div class="modal fade" id="rollingstone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <!--TAMAÑO DEL MODAL-->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rolling Stone Sixty</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" style="text-align: center;">
+                    <iframe width="760" height="515" src="https://www.youtube.com/embed/QtnPYnnTqgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!---------------------------------------------------------------------------------------->
+
+
+          <!------------------------------------------ DUA LIPA ------------------------------------>
+
+            <!-- Modal -->
+            <div class="modal fade" id="dualipa" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <!--TAMAÑO DEL MODAL-->
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dua Lipa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" style="text-align: center;">
+                    <iframe width="760" height="515" src="https://www.youtube.com/embed/tlWcfxJJJRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!---------------------------------------------------------------------------------------->
+
+               <!--*********************** NOCHES DEL BOTANICO ******************************-->
+                <!-- Modal -->
+                <div class="modal fade" id="botanicocartel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <!--TAMAÑO DEL MODAL-->
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Noches Del Botánico 2022</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body" style="text-align: center;">
+                          <img src="images/botanico_cartel.jpg">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+            <!--ROSALIA-->
+                <div class="modal fade" id="rosalia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <!--TAMAÑO DEL MODAL-->
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Rosalía</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body" style="text-align: center;">
+                        <iframe width="760" height="515" src="https://www.youtube.com/embed/UaSgXJz5DuM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                      </div>
+                      <div class="modal-footer" >
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+  </div>
+      <!--///////////////////////////////////////////////////////////////////////////////////////////-->
+      <!--///////////////////////////////// FIN MODALES ///////////////////////////////////////////-->
+
+
+
+      <!--***************************** FIN DE CONTENIDO ***************************************-->
+
+      <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
+      <!--///////////////////////////////// PIE DE PAGINA ////////////////////////////////////////////////-->
+      <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+            <footer class="pie bg-dark text-center text-white">
+              <!-- Grid container -->
+              <div class="container p-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                  
+                  <!-- Facebook 
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                    -->
+
+
+
+                  <!-- Twitter
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                       -->
+
+
+
+                  <!-- Google 
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-google"></i
+                  ></a>
+                -->
+
+
+
+                  <!-- Instagram 
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                -->
+
+
+
+                  <!-- Linkedin 
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                -->
+
+
+
+
+                  <!-- Github -->
+                  <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </section>
+
+
+
+                <!-- Section: Social media -->
+
+
+              
+                <!--/////////////////////////////////CONTACTO////////////////////////////////////-->
+                <!-- Section: Form -->
+                <section class="">
+                  <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                      <!--Grid column  ///////////CONTACTO///////////////////
+                      <div class="col-auto">
+                        <p class="pt-2">
+                          <strong>Sign up for our newsletter</strong>
+                        </p>
+                      </div>
+                      -->
+                      <!--Grid column-->
+
+                      <!--Grid column-->
+                     
+                      <div class="col-md-5 col-12">
+                        <!-- Email input //////// CONTACTO //////////
+                        <div class="form-outline form-white mb-4">
+                          <input type="email" id="form5Example21" class="form-control" />
+                          <label class="form-label" for="form5Example21">Email address</label>
+                        </div>
+                      -->
+                      </div>
+                    
+                      <!--Grid column-->
+
+                      <!--Grid column-->
+                      <div class="col-auto">
+                        <!-- Submit button ////contactar //// -->
+                         <!-- 
+                        <button type="submit" class="btn btn-outline-light mb-4">
+                          Subscribe 
+                        </button>
+                        -->
+                      </div>
+                      <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                  </form>
+                </section>
+                <!-- Section: Form -->
+                <!--/////////////////////////////////CONTACTO////////////////////////////////////-->
+
+
+
+                <!-- Section: Text -->
+                <section class="mb-4">
+                  <p>
+                   Para ver a más profundidad el proyecto pueden acceder a nuestro repositorio en Github.
+                  </p>
+                </section>
+                
+                <!-- Section: Text -->
+
+                
+              </div>
+              <!-- Grid container -->
+
+              <!-- Copyright -->
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2022 Copyright:
+                <a class="text-white" href="../html/principal.html">iListen Reproductor</a>
+              </div>
+              <!-- Copyright -->
+            </footer>
+      <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
+      <!--/////////////////////////////// FIN PIE DE PAGINA //////////////////////////////////////////////-->
+      <!--////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+    <!--SCRIPT BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-------------------->
+
+
+    <!-- SCRIPT MDB (SIMILAR BOOTSTRAP)-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
+    <!-------------------------------------->
+    
+  </body>
+</html>
