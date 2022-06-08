@@ -307,7 +307,7 @@ Array.from(document.getElementsByClassName('playlistplay')).forEach((element) =>
             e.target.classList.remove('bi-play-circle');
             e.target.classList.add('bi-pause-circle');
             /*---------------------------------------------------------*/
-            musica.src=`/${index}.mp3`;
+            musica.src=`musica/${index}.mp3`;
             portada_reproductor.src = `/images/portadas/${index}.jpg` ;
             /*---------------------------------------------------------*/
             musica.play();
