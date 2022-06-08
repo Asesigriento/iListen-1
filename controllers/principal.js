@@ -8,13 +8,13 @@ const canciones = [
         id:'1',
         titulocancion:`Everytime <br>
                 <div class="subtitulo">Boy Pablo</div>`,
-        portada:"../public/images/portadas/1.jpg"
+        portada:"images/portadas/1.jpg"
     },
     {
         id:'2',
         titulocancion:`Nana <br>
                      <div class="subtitulo">Rojuu</div>`,
-        portada:'../public/images/portadas/2.jpg'
+        portada:'/images/portadas/2.jpg'
     },
     {
         id:'3',
