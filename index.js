@@ -14,8 +14,9 @@ var app = express();
 //Middleware que te permite cargar archivos de imagenes, musica, css etc.
 app.use(express.static(__dirname + '/public/'));
 app.use(express.static(__dirname + '/controllers/'));
-app.use(express.static(__dirname +'public/img'));
-app.use(express.static(__dirname +'public/music'));
+app.use(express.static(__dirname +'public/images'));
+app.use(express.static(__dirname +'public/musica'));
+app.use(express.static(__dirname+'public/conciertos'))
 app.use(express.static('controllers'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
