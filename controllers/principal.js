@@ -1,6 +1,6 @@
 
 //AL ABRIR LA PAGINA (SALE COMO CANCIÓN PRINCIPAL)
-const musica = new Audio('/panama.mp3');
+const musica = new Audio('panama.mp3');
 
 //CREAR ARRAY CON LAS CANCIONES (LISTANDOLAS POR NÚMERO ID)
 const canciones = [
@@ -8,7 +8,7 @@ const canciones = [
         id:'1',
         titulocancion:`Everytime <br>
                 <div class="subtitulo">Boy Pablo</div>`,
-        portada:"/images/portadas/1.jpg"
+        portada:"7images/portadas/1.jpg"
     },
     {
         id:'2',
