@@ -1,6 +1,6 @@
 
 //AL ABRIR LA PAGINA (SALE COMO CANCIÓN PRINCIPAL)
-const musica = new Audio('../panama.mp3');
+const musica = new Audio('/panama.mp3');
 
 //CREAR ARRAY CON LAS CANCIONES (LISTANDOLAS POR NÚMERO ID)
 const canciones = [
