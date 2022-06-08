@@ -8,193 +8,193 @@ const canciones = [
         id:'1',
         titulocancion:`Everytime <br>
                 <div class="subtitulo">Boy Pablo</div>`,
-        portada:"../images/portadas/1.jpg"
+        portada:"../public/images/portadas/1.jpg"
     },
     {
         id:'2',
         titulocancion:`Nana <br>
                      <div class="subtitulo">Rojuu</div>`,
-        portada:'../images/portadas/2.jpg'
+        portada:'../public/images/portadas/2.jpg'
     },
     {
         id:'3',
         titulocancion:`Losing you <br>
                   <div class="subtitulo">Boy Pablo</div>`,
-        portada:'../images/portadas/3.jpg'
+        portada:'../public/images/portadas/3.jpg'
     },
     {
         id:'4',
         titulocancion:`Jump <br>
         <div class="subtitulo">Van Halen</div>`,
-        portada: '../images/portadas/4.jpg'
+        portada: '../public/images/portadas/4.jpg'
     },
     {
         id:'5',
         titulocancion:`Clavado en un bar <br>
         <div class="subtitulo">Mana</div>`,
-        portada: '../images/portadas/5.jpg'
+        portada: '../public/images/portadas/5.jpg'
     },
     {
         id:'6',
         titulocancion:`Toxicity <br>
         <div class="subtitulo">System of a Down</div>`,
-        portada: '../images/portadas/6.jpg'
+        portada: '../public/images/portadas/6.jpg'
     },
     {
         id:'7',
         titulocancion:`Panama <br>
         <div class="subtitulo">Van Halen</div>`,
-        portada: '../images/portadas/7.jpg'
+        portada: '../public/images/portadas/7.jpg'
     },
     {
         id:'8',
         titulocancion:`Voy a pasarmelo bien <br>
         <div class="subtitulo">Hombres G</div>`,
-        portada: '../images/portadas/8.jpg'
+        portada: '../public/images/portadas/8.jpg'
     },
     {
         id:'9',
         titulocancion:`Karma Police <br>
         <div class="subtitulo">Radiohead</div>`,
-        portada: '../images/portadas/9.jpg'
+        portada: '../public/images/portadas/9.jpg'
     },
     {
         id:'10',
         titulocancion:`Vertigo <br>
         <div class="subtitulo">U2</div>`,
-        portada: '../images/portadas/10.jpg'
+        portada: '../public/images/portadas/10.jpg'
     },
     {
         id:'11',
         titulocancion:`Big Poppa <br>
         <div class="subtitulo">The notorius B.I.G</div>`,
-        portada: '../images/portadas/11.jpg'
+        portada: '../public/images/portadas/11.jpg'
     },
     {
         id:'12',
         titulocancion:`Me vuelvo Loco <br>
         <div class="subtitulo">Tequila</div>`,
-        portada: '../images/portadas/12.jpg'
+        portada: '../public/images/portadas/12.jpg'
     },
     {
         id:'13',
         titulocancion:`Freaking Out the Neighborhood <br>
         <div class="subtitulo">Mac DeMarco</div>`,
-        portada: '../images/portadas/13.jpg'
+        portada: '../public/images/portadas/13.jpg'
     },
     {
         id:'14',
         titulocancion:`You are my Angel <br>
         <div class="subtitulo">Style & Breeze</div>`,
-        portada: '../images/portadas/14.jpg'
+        portada: '../public/images/portadas/14.jpg'
     },
     {
         id:'15',
         titulocancion:`Nana<br>
                 <div class="subtitulo">Rojuu</div>`,
-        portada:"../images/portadas/17.jpg"
+        portada:"../public/images/portadas/17.jpg"
     },
     {
         id:'16',
         titulocancion:`Triangulo Amoroso <br>
                      <div class="subtitulo">Rojuu</div>`,
-        portada:'../images/portadas/18.jpg'
+        portada:'../public/images/portadas/18.jpg'
     },
     {
         id:'17',
         titulocancion:`Nezuko <br>
                   <div class="subtitulo">Rojuu</div>`,
-        portada:'../images/portadas/19.jpg'
+        portada:'../public/images/portadas/19.jpg'
     },
     {
         id:'18',
         titulocancion:`Amor Acido <br>
                   <div class="subtitulo">Rojuu</div>`,
-        portada:'../images/portadas/20.jpg'
+        portada:'../public/images/portadas/20.jpg'
     },
     {
         id:'19',
         titulocancion:`Fantasia Placebo <br>
                   <div class="subtitulo">Rojuu</div>`,
-        portada:'../images/portadas/19.jpg'
+        portada:'../public/images/portadas/19.jpg'
     },
     {
         id:'20',
-        titulocancion:`I´m a Man <br>
+        titulocancion:`I'm a Man <br>
                   <div class="subtitulo">Black Strobe</div>`,
-        portada:'../images/portadas/20.jpg'
+        portada:'../public/images/portadas/20.jpg'
     },
     {
         id:'21',
         titulocancion:`La cigarra <br>
                   <div class="subtitulo">Tierra adentro y Kchiporros</div>`,
-        portada:'../images/portadas/21.jpg'
+        portada:'../public/images/portadas/21.jpg'
     },
     {
         id:'22',
         titulocancion:`Soldadito Marinero <br>
                   <div class="subtitulo">Fito y Fitipaldis</div>`,
-        portada:'../images/portadas/21.jpg'
+        portada:'../public/images/portadas/21.jpg'
     },
     {
         id:'23',
         titulocancion:`Madre <br>
                   <div class="subtitulo">Juan Diego Flores</div>`,
-        portada:'../images/portadas/23.jpg'
+        portada:'../public/images/portadas/23.jpg'
     },
     {
         id:'24',
         titulocancion:`End Of the World <br>
                   <div class="subtitulo">Fogorttenage</div>`,
-        portada:'../images/portadas/24.jpg'
+        portada:'../public/images/portadas/24.jpg'
     }, 
     {
         id:'25',
         titulocancion:`Almoraima <br>
                   <div class="subtitulo">Grisha Goryachev</div>`,
-        portada:'../images/portadas/25.jpg'
+        portada:'../public/images/portadas/25.jpg'
     },
     {
         id:'26',
         titulocancion:`After Dark <br>
                   <div class="subtitulo">Mr. Kitty</div>`,
-        portada:'../images/portadas/26.jpg'
+        portada:'../public/images/portadas/26.jpg'
     },
     {
         id:'27',
         titulocancion:`Angel <br>
                   <div class="subtitulo">Massive Attack</div>`,
-        portada:'../images/portadas/27.jpg'
+        portada:'../public/images/portadas/27.jpg'
     },
     {
         id:'28',
         titulocancion:`Rosas<br>
                   <div class="subtitulo">La Oreja de Van Gogh</div>`,
-        portada:'../images/portadas/28.jpg'
+        portada:'../public/images/portadas/28.jpg'
     },
     {
         id:'29',
         titulocancion:`I Think I Can <br>
                   <div class="subtitulo">The Pillows</div>`,
-        portada:'../images/portadas/29.jpg'
+        portada:'../public/images/portadas/29.jpg'
     },
     {
         id:'30',
         titulocancion:`STFU <br>
                   <div class="subtitulo">Shadow</div>`,
-        portada:'../images/portadas/30.jpg'
+        portada:'../public/images/portadas/30.jpg'
     },
     {
         id:'31',
         titulocancion:`Quasar <br>
                   <div class="subtitulo">Tevvez</div>`,
-        portada:'../images/portadas/31.jpg'
+        portada:'../public/images/portadas/31.jpg'
     },
     {
         id:'32',
         titulocancion:`Kill EveryBody<br>
                   <div class="subtitulo">Skrillex</div>`,
-        portada:'../images/portadas/32.jpg'
+        portada:'../public/images/portadas/32.jpg'
     }
 ];
 
@@ -307,8 +307,8 @@ Array.from(document.getElementsByClassName('playlistplay')).forEach((element) =>
             e.target.classList.remove('bi-play-circle');
             e.target.classList.add('bi-pause-circle');
             /*---------------------------------------------------------*/
-            musica.src=`../musica/${index}.mp3`;
-            portada_reproductor.src = `../images/portadas/${index}.jpg` ;
+            musica.src=`../public/musica/${index}.mp3`;
+            portada_reproductor.src = `../public/images/portadas/${index}.jpg` ;
             /*---------------------------------------------------------*/
             musica.play();
             let titulo_cancion =canciones.filter((ele)=>{
@@ -393,8 +393,8 @@ musica.addEventListener('timeupdate',()=>{
         wave.classList.add('activar2');
         index ++;
       /*---------------------------------------------------------*/
-      musica.src=`../musica/${index}.mp3`;
-      portada_reproductor.src = `../images/portadas/${index}.jpg` ;
+      musica.src=`../public/musica/${index}.mp3`;
+      portada_reproductor.src = `../public/images/portadas/${index}.jpg` ;
       /*---------------------------------------------------------*/
         musica.play();
 
@@ -459,8 +459,8 @@ musica.addEventListener('timeupdate',()=>{
         }
 
       /*---------------------------------------------------------*/
-      musica.src=`../musica/${index}.mp3`;
-      portada_reproductor.src = `../images/portadas/${index}.jpg` ;
+      musica.src=`../public/musica/${index}.mp3`;
+      portada_reproductor.src = `../public/images/portadas/${index}.jpg` ;
       /*---------------------------------------------------------*/
         musica.play();
         let titulo_cancion =canciones.filter((ele)=>{
@@ -493,8 +493,8 @@ musica.addEventListener('timeupdate',()=>{
             index=1;
         }
             /*---------------------------------------------------------*/
-            musica.src=`../musica/${index}.mp3`;
-            portada_reproductor.src = `../images/portadas/${index}.jpg` ;
+            musica.src=`../public/musica/${index}.mp3`;
+            portada_reproductor.src = `../public/images/portadas/${index}.jpg` ;
             /*---------------------------------------------------------*/
         musica.play();
         let titulo_cancion =canciones.filter((ele)=>{
@@ -548,6 +548,3 @@ musica.addEventListener('timeupdate',()=>{
         derechas.addEventListener('click',()=>{
             artista.scrollLeft +=330;
         })
-    
-        
-
