@@ -26,7 +26,7 @@ conexion.connect();*/
 router.post('/connect',async(req,res)=>{
     try{
         const client = await pool.connect();
-        const result = await client.query('DELETE FROM usuarios');
+        const result = await client.query('SELECT * FROM usuarios');
         const results = {'results':(result)?result.rows: null};
         res.send(results);
         client.release()
