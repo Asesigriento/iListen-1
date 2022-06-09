@@ -212,7 +212,7 @@ canciones.forEach(element => {
     const {id,titulocancion,portada} = element;
     let tarjeta= document.createElement('a');
     tarjeta.classList.add('tarjeta');
-    tarjeta.href=`"${titulocancion}"`;
+    tarjeta.href='#' + id;
     tarjeta.innerHTML = `
              <img src="${portada}" alt="">
              <div class="contenido">
