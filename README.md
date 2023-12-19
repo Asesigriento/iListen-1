@@ -1,18 +1,6 @@
 # iListen
-Web application by Andre and Dani
-	
-Web: 
-	ver si el usuario está repetido
-	que el login funcione bien
-	utilizar métodos para que las canciones 
-	se añadan automáticamente
-	poner rutas para los botones	
-	añadir boton de instalacion de la 
-	aplicacion python
-qué tiene que saber André?
-General:
-	Github
-Web:
-	Node.js, Heroku
-Python:
-	??
+La aplicación está desarrollada con node.js, utilizando el framework de Express. También se utiliza el hosting de Heroku, usando Heroku CLI, que con comandos de Github se publicaba en la nube con una base de datos(HerokuPostgres).
+Las funcionalidades principales en cuanto a reproducir música está programada en JavaScript Vanilla y la vista en html y CSS.
+Hoy en día, Heroku ya no da soporte a su hosting, por lo tanto, el link ya no funciona, pero la aplicación en local sí funciona.
+
+Este proyecto fue hecho por André(mi compañero) y Daniel(Yo).
